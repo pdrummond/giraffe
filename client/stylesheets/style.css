@@ -30,6 +30,7 @@ body {
   height: 300px; }
 
 .message {
+  cursor:pointer;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
@@ -173,4 +174,13 @@ body {
 }
 .archived-message a {
   text-decoration: line-through;
+}
+
+.message #content {
+  font-size:16px;
+}
+
+.message #content-header {
+  font-size:12px;
+  color:gray;
 }

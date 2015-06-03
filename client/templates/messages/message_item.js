@@ -6,6 +6,9 @@ Template.messageItem.events({
       }
     });
   },
+  'click': function() {
+    Router.go("messagePage", {"_id": this._id});
+  }
 });
 
 Template.messageItem.helpers({
