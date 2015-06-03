@@ -1,0 +1,10 @@
+<template name="messageItem">
+  <div class="message {{#if archived}}archived-message{{/if}}">
+    <div class="message-content">
+      <h3><a href="{{pathFor 'messagePage'}}">{{content}}</a><span>{{owner}}</span></h3>
+    </div>
+    {{#if isOwner}}
+      <input id="archived-check" type="checkbox" checked="{{archived}}" class="pull-right" />
+    {{/if}}
+  </div>
+</template>
