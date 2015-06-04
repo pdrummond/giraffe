@@ -1,7 +1,9 @@
 <template name="createBox">
-  <form id="createBox" class="uk-form" style="position:fixed;bottom:10px;left:10px;right:10px;border:2px solid lightgray;border-radius:5px">
-    <fieldset data-uk-margin>
-          <input style="width:100%" name="content" autocomplete="off" autofocus="autofocus" type="text" value="" placeholder="Type your message here" class="form-control"/>
-    </fieldset>
-  </form>
+  <div style="background:white;position:fixed;bottom:0;left:0;right:0;z-index:2;border-top:1px solid lightgray">
+    <form id="createBox" class="uk-form" style="margin:20px;border:2px solid lightgray;border-radius:5px;z-index:2">
+      <fieldset data-uk-margin>
+            <textarea id="create-box-input" style="resize:none;width:100%" name="content" autocomplete="off" autofocus="autofocus" type="text" value="" placeholder="Type your message here" class="form-control"></textarea>
+      </fieldset>
+    </form>
+  </div>
 </template>

@@ -11,3 +11,9 @@
 .message .content {
   font-size:16px;
 }
+
+.message .content h1 {
+  font-size:20px;
+  text-transform: uppercase;
+  color: orange;
+}
