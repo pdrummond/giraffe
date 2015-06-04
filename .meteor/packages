@@ -12,3 +12,4 @@ accounts-password
 audit-argument-checks
 accounts-ui
 zcurtis:uikit
+momentjs:moment
