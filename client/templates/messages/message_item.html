@@ -1,11 +1,12 @@
 <template name="messageItem">
-  <div class="message {{#if archived}}archived-message{{/if}}">
-    <div class="message-content">
-      <div id="content-header">{{owner}}</div>
-      <span id="content">{{content}}</span>
+  <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
+    <div style="color:lightgray;font-size:12px">
+        {{owner}}
+        <span class="message-created-at">{{createdAt}}</span>
     </div>
+    <div class="content">{{content}}</div>
     {{#if isOwner}}
-      <input id="archived-check" type="checkbox" checked="{{archived}}" class="pull-right" />
+        <input id="archived-check" type="checkbox" checked="{{archived}}" style="position:absolute;top:5px;right:5px"/>
     {{/if}}
-  </div>
+  </li>
 </template>

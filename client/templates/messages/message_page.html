@@ -1,6 +1,8 @@
 <template name="messagePage">
   <div class="message-page page">
-    {{> messageItem}}
+      <ul class="uk-list uk-list-space uk-list-line" style="padding:20px">
+          {{> messageItem}}
+      </ul>
 
     <div class="btn-group" role="group" aria-label="...">
       <button id="edit-button" type="button" class="btn btn-link">Edit</button>
