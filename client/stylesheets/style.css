@@ -4,6 +4,10 @@
     color:#309FD0;
 }
 
+.archived-message {
+  color: gray !important;
+}
+
 .archived-message .content {
   text-decoration: line-through;
 }
@@ -16,4 +20,23 @@
   font-size:20px;
   text-transform: uppercase;
   color: orange;
+  margin: 0 0 5px 0;
+}
+
+.message .content h2 {
+  font-size:18px;
+  text-transform: uppercase;
+  color: orange;
+  margin: 0 0 5px 0;
+}
+
+.message .content h3 {
+  font-size:16px;
+  text-transform: uppercase;
+  color: orange;
+  margin: 0 0 5px 0;
+}
+
+.message .content p:first-of-type {
+  margin: 0 0 5px 0;
 }
