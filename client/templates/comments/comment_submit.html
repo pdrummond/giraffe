@@ -1,0 +1,12 @@
+<template name="commentSubmit">
+  <form name="comment" class="uk-form">
+
+    <fieldset data-uk-margin class="{{errorClass 'body'}}">
+        <div class="controls">
+            <textarea name="body" id="body" class="form-control" rows="3" cols="100"></textarea>
+            <span class="help-block">{{errorMessage 'body'}}</span>
+        </div>
+    </fieldset>
+    <button type="submit" class="uk-button">Add Comment</button>
+  </form>
+</template>
