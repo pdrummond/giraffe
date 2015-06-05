@@ -1,13 +1,28 @@
-Template.createBox.events({
-  "keydown #create-box-input": function(ev) {
+
+CreateBoxComponent = BlazeComponent.extendComponent({
+  template: function() { return 'createBox'},
+
+  events: function() {
+    return [{
+      "keydown #create-box-input": this.onKeydown,
+    }];
+  },
+
+  getMessageAttrs: function() {
+    return {
+      messageType: "chatMessage",
+    };
+  },
+
+  onKeydown: function(ev) {
     if(ev.keyCode == 13 && ev.shiftKey == false) {
       ev.preventDefault();
       var content = $('#create-box-input').val();
       if(content.length > 0) {
-        var message = {
-            messageType: "chatMessage",
+
+        var message = _.extend(this.getMessageAttrs(), {
             content: content
-        };
+        });
 
         Meteor.call('messageInsert', message, function(error, result) {
           if (error) {
@@ -20,4 +35,4 @@ Template.createBox.events({
       }
     }
   }
-});
+}).register('CreateBoxComponent');
