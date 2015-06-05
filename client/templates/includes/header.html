@@ -1,39 +1,38 @@
 <template name="header">
     <nav class="uk-navbar">
 
-                                    <a class="uk-navbar-brand" href="{{pathFor 'messagesPage'}}">Giraffe</a>
+      <a class="uk-navbar-brand" href="{{pathFor 'messagesPage'}}">Giraffe</a>
 
-                                    <ul class="uk-navbar-nav">
-                                        <li class="uk-parent uk-active" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
-                                            <a href=""><i class="uk-icon-home"></i> Home</a>
+      <ul class="uk-navbar-nav">
+          <li class="uk-parent uk-active" data-uk-dropdown="" aria-haspopup="true" aria-expanded="false">
+              <a href=""><i class="uk-icon-home"></i> Home</a>
 
-                                            <div class="uk-dropdown uk-dropdown-navbar">
-                                                <ul class="uk-nav uk-nav-navbar">
-                                                    <li class="uk-nav-header">Favourite Channels</li>
-                                                    <li><a href="#">Channel 1</a></li>
-                                                    <li><a href="#">Channel 2</a></li>
-                                                    <li class="uk-nav-header">Recent Channels</li>
-                                                    <li><a href="#">Channel 42</a></li>
-                                                    <li><a href="#">Channel 41</a></li>
-                                                    <li class="uk-nav-divider"></li>
-                                                    <li><a href="#">Create Channel</a></li>
-                                                </ul>
-                                            </div>
+              <div class="uk-dropdown uk-dropdown-navbar">
+                  <ul class="uk-nav uk-nav-navbar">
+                      <li class="uk-nav-header">Favourite Channels</li>
+                      <li><a href="#">Channel 1</a></li>
+                      <li><a href="#">Channel 2</a></li>
+                      <li class="uk-nav-header">Recent Channels</li>
+                      <li><a href="#">Channel 42</a></li>
+                      <li><a href="#">Channel 41</a></li>
+                      <li class="uk-nav-divider"></li>
+                      <li><a href="#">Create Channel</a></li>
+                  </ul>
+              </div>
 
-                                        </li>
+          </li>
 
-                                    </ul>
+      </ul>      
+      <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
+          {{> loginButtons}}
+          <label id="hide-archived" class="pull-right">
+            <input type="checkbox" checked="{{hideArchived}}" />
+              Hide Archived Messages
+            </label>
 
-                                    <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
-                                        {{> loginButtons}}
-                                        <label id="hide-archived" class="pull-right">
-                                          <input type="checkbox" checked="{{hideArchived}}" />
-                                            Hide Archived Messages
-                                          </label>
+      </div>
 
-                                    </div>
-
-                                </nav>
+  </nav>
   <!--<nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">

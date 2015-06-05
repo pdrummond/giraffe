@@ -1,12 +1,12 @@
 <template name="messageItem">
-  <li class="message-wrapper {{#if archived}}archived-message{{/if}}" style="position:relative">
+  <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
       <div id="message-icon" class="uk-align-left" style="position:relative">
-          <img src="{{ownerImageUrl}}" style="opacity:0.5"/>
           {{#if parentMessageId}}
-              <i class="uk-icon-comment"></i>
+              <i class="uk-icon-hover uk-icon-comment-o uk-icon-large"></i>
           {{else}}
-              <i class="uk-icon-quote-left" ></i>
+              <i class="uk-icon-hover uk-icon-comment uk-icon-large"></i>
           {{/if}}
+          <img src="{{ownerImageUrl}}"/>
       </div>
       <div style="color:gray;font-size:14px">
           {{#if parentMessageId}}

@@ -12,8 +12,8 @@
   text-decoration: line-through;
 }
 
-.message .content {
-  font-size:16px;
+.message .content p {
+  font-size:18px;
 }
 
 .message .content h1 {
@@ -51,8 +51,5 @@
 }
 
 #message-icon i {
-    position:absolute;
-    top:-5px;
-    left:-5px;
-    font-size:1.5em;
+    margin-right:10px;
 }
