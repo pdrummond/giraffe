@@ -10,16 +10,19 @@
       </div>
       <div style="color:gray;font-size:14px">
           {{#if parentMessageId}}
-              {{ownerName}} commented on GIRA-55 at {{formatTime createdAt}}
+              {{ownerName}} commented on <a href="{{pathFor "messagePage" _id=parentMessageId}}">GIRA-{{parentMessageGid}}</a> at {{formatTime createdAt}}
           {{else}}
-              {{ownerName}}
-              <span class="message-link message-created-at"> | {{formatTime createdAt}}</span>
-              <span class="message-link"> | {{commentsCount}} comments</span>
+              {{ownerName}} <span class="message-link message-created-at">{{formatTime createdAt}}</span>
           {{/if}}
       </div>
+
       <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>
+      <span style="position:absolute;top:5px;right:5px">
+        <span class="message-link" style="color:lightgray;font-size:12px">GIRA-{{gid}}</span>
+      <span class="message-link"><i class="uk-icon-comment" style="font-size:12px;color:lightgray"> {{commentsCount}}</i></span>
       {{#if isOwner}}
-          <input id="archived-check" type="checkbox" checked="{{archived}}" style="position:absolute;top:5px;right:5px"/>
+          <input id="archived-check" type="checkbox" checked="{{archived}}"/>
       {{/if}}
+      </span>
   </li>
 </template>

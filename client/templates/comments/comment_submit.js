@@ -19,7 +19,8 @@ Template.commentSubmit.events({
     var comment = {
         messageType: "commentMessage",
       content: $body.val(),
-      parentMessageId: template.data._id
+      parentMessageId: template.data._id,
+      parentMessageGid: template.data.gid,
     };
 
     var errors = {};
