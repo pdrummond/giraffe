@@ -12,11 +12,7 @@ Template.messagePage.events({
     var currentMessageId = this._id;
     var content = window.prompt("Enter new content here", this.content);
     if(content != null) {
-      var messageAttributes = {
-        content: content
-      };
-
-      Meteor.call("messageUpdateContent", currentMessageId, messageAttributes, function(error, result) {
+      Meteor.call("messageUpdateContent", currentMessageId, content, function(error, result) {
         if (error) {
           return alert(error.reason);
         }
