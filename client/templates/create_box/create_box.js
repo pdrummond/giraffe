@@ -5,7 +5,8 @@ Template.createBox.events({
       var content = $('#create-box-input').val();
       if(content.length > 0) {
         var message = {
-          content: content
+            messageType: "chatMessage",
+            content: content
         };
 
         Meteor.call('messageInsert', message, function(error, result) {

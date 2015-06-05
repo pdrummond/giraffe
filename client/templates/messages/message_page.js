@@ -1,3 +1,8 @@
+Template.messagePage.helpers({
+    comments: function() {
+        return Messages.find({parentMessageId: this._id});
+    }
+});
 Template.messagePage.events({
   'click #edit-button': function(e) {
     var currentMessageId = this._id;

@@ -6,13 +6,20 @@ Template.messageItem.events({
       }
     });
   },
-  'click .message-created-at': function() {
+  'click .message-link': function() {
     Router.go("messagePage", {"_id": this._id});
   }
 });
 
 Template.messageItem.helpers({
-  isOwner: function() {
-    return this.ownerId == Meteor.userId();
-  },
+    getMessageTemplate: function() {
+        console.log("template: " + this.messageType);
+        return this.messageType;
+    },
+      isOwner: function() {
+        return this.ownerId == Meteor.userId();
+      },
+      commentsCount: function() {
+          return Messages.find({parentMessageId: this._id}).count();
+      }
 });

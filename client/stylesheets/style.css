@@ -1,4 +1,4 @@
-.message-created-at:hover {
+.message-link:hover {
     cursor:pointer;
     text-decoration: underline;
     color:#309FD0;
@@ -48,4 +48,11 @@
 
 #message-icon img {
     border-radius: 5px;
+}
+
+#message-icon i {
+    position:absolute;
+    top:-5px;
+    left:-5px;
+    font-size:1.5em;
 }

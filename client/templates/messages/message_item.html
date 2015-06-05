@@ -1,14 +1,25 @@
 <template name="messageItem">
-  <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
-    <div id="message-icon" style="float:left">
-        <img src="{{ownerImageUrl}}"/>
-    </div>
-    <div style="color:lightgray;font-size:12px">
-        {{ownerName}} - <span class="message-created-at">{{formatTime createdAt}}</span>
-    </div>
-    <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>
-    {{#if isOwner}}
-        <input id="archived-check" type="checkbox" checked="{{archived}}" style="position:absolute;top:5px;right:5px"/>
-    {{/if}}
+  <li class="message-wrapper {{#if archived}}archived-message{{/if}}" style="position:relative">
+      <div id="message-icon" class="uk-align-left" style="position:relative">
+          <img src="{{ownerImageUrl}}" style="opacity:0.5"/>
+          {{#if parentMessageId}}
+              <i class="uk-icon-comment"></i>
+          {{else}}
+              <i class="uk-icon-quote-left" ></i>
+          {{/if}}
+      </div>
+      <div style="color:gray;font-size:14px">
+          {{#if parentMessageId}}
+              {{ownerName}} commented on GIRA-55 at {{formatTime createdAt}}
+          {{else}}
+              {{ownerName}}
+              <span class="message-link message-created-at"> | {{formatTime createdAt}}</span>
+              <span class="message-link"> | {{commentsCount}} comments</span>
+          {{/if}}
+      </div>
+      <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>
+      {{#if isOwner}}
+          <input id="archived-check" type="checkbox" checked="{{archived}}" style="position:absolute;top:5px;right:5px"/>
+      {{/if}}
   </li>
 </template>

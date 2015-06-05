@@ -4,10 +4,22 @@
           {{> messageItem}}
       </ul>
 
-    <div class="btn-group" role="group" aria-label="...">
-      <button id="edit-button" type="button" class="btn btn-link">Edit</button>
-      <button id="delete-button" type="button" class="btn btn-link">Delete</button>
+    <div class="btn-group" role="group" aria-label="..." style="padding:20px">
+      <button id="edit-button" type="button" class="uk-button">Edit</button>
+      <button id="delete-button" type="button" class="uk-button">Delete</button>
     </div>
-
+    <div id="comments-wrapper"  style="padding:20px">
+    <h3>Comments</h3>
+    <ul class="uk-list uk-list-space uk-list-line">
+      {{#each comments}}
+        {{> messageItem}}
+      {{/each}}
+    </ul>
+    {{#if currentUser}}
+      {{> commentSubmit}}
+    {{else}}
+      <p>Please log in to leave a comment.</p>
+    {{/if}}
+    </div>
   </div>
 </template>
