@@ -1,7 +1,10 @@
 <template name="messageItem">
   <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
+    <div id="message-icon" style="float:left">
+        <img src="{{ownerImageUrl}}"/>
+    </div>
     <div style="color:lightgray;font-size:12px">
-        {{getOwnerName}} - <span class="message-created-at">{{formatTime createdAt}}</span>
+        {{ownerName}} - <span class="message-created-at">{{formatTime createdAt}}</span>
     </div>
     <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>
     {{#if isOwner}}

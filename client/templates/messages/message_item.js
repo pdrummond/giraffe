@@ -15,8 +15,4 @@ Template.messageItem.helpers({
   isOwner: function() {
     return this.ownerId == Meteor.userId();
   },
-
-  getOwnerName: function() {
-    return Meteor.users.findOne(this.ownerId).username;
-  }
 });
