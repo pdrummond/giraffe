@@ -1,6 +1,10 @@
 Template.messagePage.helpers({
     comments: function() {
+      if (Session.get("hideArchived")) {
+        return Messages.find({parentMessageId: this._id, archived: {$ne: true}});
+      } else {
         return Messages.find({parentMessageId: this._id});
+      }
     }
 });
 Template.messagePage.events({
