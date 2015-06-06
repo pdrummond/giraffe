@@ -57,7 +57,7 @@
     margin-right:10px;
 }
 
-.message-page > ul {
+#main-message {
   background: whitesmoke;
   border-bottom: 1px solid lightgray;
 }

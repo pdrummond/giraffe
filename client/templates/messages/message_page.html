@@ -1,6 +1,7 @@
 <template name="messagePage">
   <div class="message-page page">
-      <ul class="uk-list uk-list-space uk-list-line" style="padding:20px">
+    <div id="main-message-wrapper" style="z-index:2">
+      <ul id="main-message" class="uk-list" style="padding:10px">
           {{> messageItem}}
       </ul>
 
@@ -12,6 +13,7 @@
         Doable
     </label>
     </div>
+  </div>
 
     <div id="comments-wrapper"  style="padding:20px">
     <h3>Comments</h3>
