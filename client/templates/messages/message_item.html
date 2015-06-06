@@ -1,11 +1,11 @@
 <template name="messageItem">
   <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
       <div id="message-icon" class="uk-align-left" style="position:relative">
-          {{#if parentMessageId}}
+          <!--{{#if parentMessageId}}
               <i class="uk-icon-hover uk-icon-comment-o uk-icon-large"></i>
           {{else}}
               <i class="uk-icon-hover uk-icon-comment uk-icon-large"></i>
-          {{/if}}
+          {{/if}}-->
           <img src="{{ownerImageUrl}}"/>
       </div>
       <div style="color:gray;font-size:14px">
@@ -24,5 +24,10 @@
           <input id="archived-check" type="checkbox" checked="{{archived}}"/>
       {{/if}}
       </span>
+      {{#if doable}}
+      <span style="position: absolute;top:25px;right:5px;">
+        {{> messageStatusDropdown}}
+      </span>
+      {{/if}}
   </li>
 </template>

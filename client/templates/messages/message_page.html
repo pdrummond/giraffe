@@ -4,10 +4,15 @@
           {{> messageItem}}
       </ul>
 
-    <div class="btn-group" role="group" aria-label="..." style="padding:20px">
+    <div class="btn-group" role="group" aria-label="..." style="padding:10px;background:#EDEDED;position:relative;top:-15px;border-bottom:1px solid gray;">
       <button id="edit-button" type="button" class="uk-button">Edit</button>
       <button id="delete-button" type="button" class="uk-button">Delete</button>
+    <label id="doable-check" style="float:right">
+      <input id="doable" type="checkbox" checked="{{doable}}" />
+        Doable
+    </label>
     </div>
+
     <div id="comments-wrapper"  style="padding:20px">
     <h3>Comments</h3>
     <ul class="uk-list uk-list-space uk-list-line">

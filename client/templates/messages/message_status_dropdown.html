@@ -1,0 +1,15 @@
+<template name="messageStatusDropdown">
+
+  <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+      <button class="uk-button uk-button-small {{statusClass}}">{{status}} <i class="uk-icon-caret-down"></i></button>
+      <div class="uk-dropdown">
+          <ul class="uk-nav uk-nav-dropdown">
+              <li><a id="message-status-set-open" href="#">Open</a></li>
+              <li><a id="message-status-set-in-progress" href="#">In Progress</a></li>
+              <li><a id="message-status-set-blocked" href="#">Blocked</a></li>
+              <li><a id="message-status-set-in-test" href="#">In Test</a></li>
+              <li><a id="message-status-set-done" href="#">Done</a></li>
+          </ul>
+      </div>
+  </div>
+</template>

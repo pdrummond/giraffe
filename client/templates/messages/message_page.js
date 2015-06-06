@@ -30,5 +30,13 @@ Template.messagePage.events({
         }
       });
     }
+  },
+
+  'click #doable': function(e) {
+    Meteor.call('messageUpdateDoableField', this._id, event.target.checked, function(error, result) {
+      if (error) {
+        return alert(error.reason);
+      }
+    });
   }
 });

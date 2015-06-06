@@ -1,6 +1,6 @@
 Template.header.events({
   "change #hide-archived input": function (event) {
-    Session.set("hideArchived", event.target.checked);
+    Session.setPersistent("hideArchived", event.target.checked);
   }
 });
 
