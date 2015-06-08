@@ -1,6 +1,41 @@
 <template name="searchBox">
   <div style="background:white;position:fixed;top:40px;left:0;right:0;z-index:2;border-top:1px solid lightgray">
     <form id="searchBox" class="uk-form" style="margin:20px;z-index:2">
+      <span class="uk-button-dropdown uk-float-left" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+          <button class="uk-button"><i class="uk-icon-filter"></i> Filters <i class="uk-icon-caret-down"></i></button>
+          <div class="uk-dropdown uk-dropdown-width-2">
+              <div class="uk-grid uk-dropdown-grid">
+                  <div class="uk-width-1-2">
+                      <ul class="uk-nav uk-nav-dropdown uk-panel">
+                          <li><a class="filter-command" href="#">doable:true</a></li>
+                          <li><a class="filter-command" href="#">doable:false</a></li>
+                          <li class="uk-nav-header">Message Status</li>
+                          <li><a class="filter-command" href="#">status:"Open"</a></li>
+                          <li><a href="#">status:"In Progress"</a></li>
+                          <li><a href="#">status:"Blocker"</a></li>
+                          <li><a href="#">status:"Done"</a></li>
+                          <li class="uk-nav-divider"></li>
+                          <li><a href="#">Separated item</a></li>
+                      </ul>
+
+                  </div>
+                  <div class="uk-width-1-2">
+
+                      <ul class="uk-nav uk-nav-dropdown uk-panel">
+                          <li><a href="#">Item</a></li>
+                          <li><a href="#">Another item</a></li>
+                          <li class="uk-nav-header">Header</li>
+                          <li><a href="#">Item</a></li>
+                          <li><a href="#">Another item</a></li>
+                          <li class="uk-nav-divider"></li>
+                          <li><a href="#">Separated item</a></li>
+                      </ul>
+
+                  </div>
+              </div>
+
+          </div>
+      </span>
       <fieldset data-uk-margin>
             <input id="search-box-input" value="{{filterQuery}}" style="width:300px" name="content" autocomplete="off" autofocus="autofocus" type="text" placeholder="Type here to filter messages" class="form-control"/>
       </fieldset>
