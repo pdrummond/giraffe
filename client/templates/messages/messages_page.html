@@ -1,9 +1,11 @@
 <template name="messagesPage">
 
+  {{> SearchBoxComponent}}
+
+  {{> messagesList}}
+
   {{#if currentUser}}
     {{> CreateBoxComponent}}
   {{/if}}
-
-  {{> messagesList}}
 
 </template>

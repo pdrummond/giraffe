@@ -14,7 +14,7 @@
                       <li><a href="#">Channel 2</a></li>
                       <li class="uk-nav-header">Recent Channels</li>
                       <li><a href="#">Channel 42</a></li>
-                      <li><a href="#">Channel 41</a></li>
+                      <li><a href="#">Channel 41</a></li>l
                       <li class="uk-nav-divider"></li>
                       <li><a href="#">Create Channel</a></li>
                   </ul>
@@ -25,8 +25,8 @@
       </ul>
       <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
           {{> loginButtons}}
-          <label id="hide-archived" class="pull-right">
-            <input type="checkbox" checked="{{hideArchived}}" />
+          <label id="hide-archived" for="hide-archived-input" class="pull-right">
+            <input id="hide-archived-input" type="checkbox" checked="{{hideArchived}}" />
               Hide Archived Messages
             </label>
 

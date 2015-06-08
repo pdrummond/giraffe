@@ -1,0 +1,9 @@
+<template name="searchBox">
+  <div style="background:white;position:fixed;top:40px;left:0;right:0;z-index:2;border-top:1px solid lightgray">
+    <form id="searchBox" class="uk-form" style="margin:20px;z-index:2">
+      <fieldset data-uk-margin>
+            <input id="search-box-input" value="{{filterQuery}}" style="width:300px" name="content" autocomplete="off" autofocus="autofocus" type="text" placeholder="Type here to filter messages" class="form-control"/>
+      </fieldset>
+    </form>
+  </div>
+</template>
