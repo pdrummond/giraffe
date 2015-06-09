@@ -11,10 +11,11 @@ sacha:spin
 accounts-password
 audit-argument-checks
 accounts-ui
-zcurtis:uikit
 momentjs:moment
 chuangbo:marked
 jparker:gravatar
 konecty:mongo-counter
 peerlibrary:blaze-components
 u2622:persistent-session
+perak:codemirror
+zcurtis:uikit

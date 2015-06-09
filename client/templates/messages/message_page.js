@@ -43,5 +43,6 @@ Template.messagePage.events({
 
 Template.messagePage.onRendered(function() {
   UIkit.sticky(".message-page #main-message-wrapper", {top:42});
+  UIkit.htmleditor(".markdown-area", { markdown:true });
   window.scrollTo(0,0);
 });
