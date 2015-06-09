@@ -3,6 +3,10 @@ Template.messagesList.helpers({
       console.log("boom");
     var jsonQuery = {};
 
+    if(Session.get("channelId")) {
+      jsonQuery.channelId = Session.get("channelId");
+    }
+
     if (Session.get("hideArchived")) {
       jsonQuery.archived = {$ne: true};
     }

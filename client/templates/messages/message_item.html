@@ -14,6 +14,9 @@
           {{else}}
               {{ownerName}} <span class="message-link message-created-at">{{formatTime createdAt}}</span>
           {{/if}}
+          {{#if showChannelBadge}}
+          <div class="uk-badge uk-badge-warning">{{channelBadgeName}}</div>
+          {{/if}}
       </div>
 
       <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>

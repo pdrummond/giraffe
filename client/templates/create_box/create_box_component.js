@@ -21,7 +21,8 @@ CreateBoxComponent = BlazeComponent.extendComponent({
       if(content.length > 0) {
 
         var message = _.extend(this.getMessageAttrs(), {
-            content: content
+            content: content,
+            channelId: Session.get('channelId')
         });
 
         Meteor.call('messageInsert', message, function(error, result) {
