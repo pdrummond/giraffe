@@ -65,3 +65,7 @@
 .uk-htmleditor-content {
   max-height:100px !important;
 }
+
+* {
+    outline: none !important;
+}

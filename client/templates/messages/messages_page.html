@@ -1,5 +1,7 @@
 <template name="messagesPage">
 
+  <div style="padding-top:50px">
+
   {{> SearchBoxComponent}}
 
   {{> messagesList}}
@@ -7,5 +9,7 @@
   {{#if currentUser}}
     {{> CreateBoxComponent}}
   {{/if}}
+
+  </div>
 
 </template>

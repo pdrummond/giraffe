@@ -1,24 +1,20 @@
 <template name="channelDropdown">
-  <li class="uk-parent uk-active" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
-      <a href=""><i class="{{channelIcon}}"></i> {{channelName}}</a>
-
-      <div class="uk-dropdown uk-dropdown-navbar">
-          <ul class="uk-nav uk-nav-navbar">
-            <li><a id="home-channel" href="#"><i class="uk-icon-home"></i> Home</a></li>
-            <li><a id="create-channel" href="#"><i class="uk-icon-plus"></i> Create Channel</a></li>
-            <li class="uk-nav-divider"></li>
-            {{#each channels}}
-              {{> channelItem}}
-            {{/each}}
-            <li class="uk-nav-divider"></li>
-            <li><a id="rename-channel" href="#"><i class="uk-icon-pencil"></i> Rename Channel</a></li>
-            <li><a id="delete-channel" href="#"><i class="uk-icon-times"></i> Delete Channel</a></li>
-          </ul>
-      </div>
-
-  </li>
+  <div class="ui dropdown item">
+    {{channelName}} <i class="dropdown icon"></i>
+    <div class="menu">
+      <div id="home-channel" class="item">Home</div>
+      <div id="create-channel" class="item">Create Channel</div>
+      <div class="divider"></div>
+      {{#each channels}}
+        {{> channelItem}}
+      {{/each}}
+      <div class="divider"></div>
+      <div id="rename-channel" class="item">Rename Channel</div>
+      <div id="delete-channel" class="item">Delete Channel</div>
+    </div>
+  </div>
 </template>
 
 <template name="channelItem">
-  <li><a href="#">{{channelName}}</a></li>
+  <a class="item">{{channelName}}</a>
 </template>

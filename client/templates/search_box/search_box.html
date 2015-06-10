@@ -2,12 +2,7 @@
 <div class="ui labeled icon top pointing dropdown button">
     <i class="filter icon"></i>
     <span class="text">Filter Messages</span>
-    <div class="menu">
-      <div class="ui icon input">
-        <i class="search icon"></i>
-        <input id="search-box-input" value="{{filterQuery}}" type="text" name="search" placeholder="Search messages...">
-      </div>
-      <div class="divider"></div>
+    <div class="menu">      
       <div class="header">
         <i class="calendar icon"></i>
         Filter by type
@@ -33,8 +28,8 @@
         <div class="ui  empty circular label"></div>
         Open
       </div>
-      <div class="item">
-        <div data-filter-query="status:In Progress" class="filter-command ui green empty circular label"></div>
+      <div data-filter-query="status:'In Progress'" class="item filter-command" >
+        <div class="ui green empty circular label"></div>
         In Progress
       </div>
       <div class="item">
@@ -63,6 +58,10 @@
         This Year
       </div>
     </div>
+  </div>
+  <div class="ui icon input">
+        <i class="search icon"></i>
+        <input id="search-box-input" value="{{filterQuery}}" type="text" name="search" placeholder="Search messages...">
   </div>
   <!--<div style="background:white;position:fixed;top:40px;left:0;right:0;z-index:2;border-top:1px solid lightgray">
     <form id="searchBox" class="uk-form" style="margin:20px;z-index:2">

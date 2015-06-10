@@ -1,15 +1,14 @@
 <template name="messageStatusDropdown">
-
-  <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
-      <button class="uk-button uk-button-small {{statusClass}}">{{status}} <i class="uk-icon-caret-down"></i></button>
-      <div class="uk-dropdown">
-          <ul class="uk-nav uk-nav-dropdown">
-              <li><a id="message-status-set-open" href="#">Open</a></li>
-              <li><a id="message-status-set-in-progress" href="#">In Progress</a></li>
-              <li><a id="message-status-set-blocked" href="#">Blocked</a></li>
-              <li><a id="message-status-set-in-test" href="#">In Test</a></li>
-              <li><a id="message-status-set-done" href="#">Done</a></li>
-          </ul>
-      </div>
-  </div>
+  <div class="ui simple dropdown item">
+    <div class="text">{{status}}</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="header">Statuses</div>
+      <div class="item" id="message-status-set-open">Open</div>
+      <div class="item" id="message-status-set-in-progress">In Progress</div>
+      <div class="item" id="message-status-set-blocked">Blocked</div>
+      <div class="item" id="message-status-set-in-test">In Test</div>
+      <div class="item" id="message-status-set-done">Done</div>      
+    </div>
+  </div>  
 </template>

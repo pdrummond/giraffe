@@ -59,7 +59,7 @@ Template.channelDropdown.events({
 
 
 Template.channelItem.events({
-    'click li': function (e) {
+    'click .item': function (e) {
       e.preventDefault();
       Session.setPersistent('channelId', this._id);
     }
