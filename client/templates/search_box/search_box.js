@@ -15,7 +15,7 @@ SearchBoxComponent = BlazeComponent.extendComponent({
 
   onFilterCommand: function(e) {
     e.preventDefault();
-    var filterQuery = $(e.target).text();
+    var filterQuery = $(e.target).attr('data-filter-query');
     this.setQuery(filterQuery);
   },
 
@@ -30,6 +30,10 @@ SearchBoxComponent = BlazeComponent.extendComponent({
   setQuery: function(filterQuery) {
     Session.setPersistent('filterQuery', filterQuery);
     Meteor.subscribe('messages', {filterQuery: filterQuery});
+  },
+
+  onRendered: function() {
+    $('.ui.dropdown').dropdown();
   }
 
 }).register('SearchBoxComponent');

@@ -35,5 +35,5 @@ CreateBoxComponent = BlazeComponent.extendComponent({
         });
       }
     }
-  }
+  }  
 }).register('CreateBoxComponent');

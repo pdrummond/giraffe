@@ -18,4 +18,4 @@ konecty:mongo-counter
 peerlibrary:blaze-components
 u2622:persistent-session
 perak:codemirror
-zcurtis:uikit
+semantic:ui-css
