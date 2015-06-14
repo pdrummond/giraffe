@@ -1,0 +1,20 @@
+<template name="channelDropdown">
+  <div class="ui dropdown item">
+    {{channelName}} <i class="dropdown icon"></i>
+    <div class="menu">
+      <div id="home-channel" class="item">Home</div>
+      <div id="create-channel" class="item">Create Channel</div>
+      <div class="divider"></div>
+      {{#each channels}}
+        {{> channelItem}}
+      {{/each}}
+      <div class="divider"></div>
+      <div id="rename-channel" class="item">Rename Channel</div>
+      <div id="delete-channel" class="item">Delete Channel</div>
+    </div>
+  </div>
+</template>
+
+<template name="channelItem">
+  <a class="item">{{channelName}}</a>
+</template>

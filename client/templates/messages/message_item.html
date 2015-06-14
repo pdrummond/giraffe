@@ -1,6 +1,6 @@
 <template name="messageItem">
-  <li class="message {{#if archived}}archived-message{{/if}}" style="position:relative">
-      <div id="message-icon" class="uk-align-left" style="position:relative">
+  <div class="event message {{#if archived}}archived-message{{/if}}" style="position:relative">
+      <div class="label">
           <!--{{#if parentMessageId}}
               <i class="uk-icon-hover uk-icon-comment-o uk-icon-large"></i>
           {{else}}
@@ -8,15 +8,23 @@
           {{/if}}-->
           <img src="{{ownerImageUrl}}"/>
       </div>
-      <div style="color:gray;font-size:14px">
+      <div class="content" style="color:gray;font-size:14px">
+        <div class="summary">
           {{#if parentMessageId}}
-              {{ownerName}} commented on <a href="{{pathFor "messagePage" _id=parentMessageId}}">GIRA-{{parentMessageGid}}</a> at {{formatTime createdAt}}
+              <div class="user"><a>{{ownerName}}</a></div> commented on <a href="{{pathFor "messagePage" _id=parentMessageId}}">GIRA-{{parentMessageGid}}</a> at {{formatTime createdAt}}
           {{else}}
-              {{ownerName}} <span class="message-link message-created-at">{{formatTime createdAt}}</span>
+              <div class="user"><a>{{ownerName}}</a></div> <div class="date message-link message-created-at">{{formatTime createdAt}}</div>
           {{/if}}
-      </div>
+          {{#if showChannelBadge}}
+          <div class="uk-badge uk-badge-warning">{{channelBadgeName}}</div>
+          {{/if}}
+          </div>
+      
+        
+        <div class="text {{#if parentMessageId}}extra{{/if}}">{{#markdown}}{{content}}{{/markdown}}</div>
 
-      <div class="content">{{#markdown}}{{content}}{{/markdown}}</div>
+        
+      </div>
       <span style="position:absolute;top:5px;right:5px">
         <span class="message-link" style="color:lightgray;font-size:12px">GIRA-{{gid}}</span>
       <span class="message-link"><i class="uk-icon-comment" style="font-size:12px;color:lightgray"> {{commentsCount}}</i></span>
@@ -29,5 +37,5 @@
         {{> messageStatusDropdown}}
       </span>
       {{/if}}
-  </li>
+  </div>
 </template>

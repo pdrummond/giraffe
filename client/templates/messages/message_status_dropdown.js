@@ -3,16 +3,16 @@ Template.messageStatusDropdown.helpers({
     var statusClass;
     switch(this.status) {
       case 'Open': statusClass = ''; break;
-      case 'In Progress': statusClass = 'uk-button-success'; break;
-      case 'Blocked': statusClass = 'uk-button-danger'; break;
-      case 'In Test': statusClass = 'uk-button-primary'; break;
+      case 'In Progress': statusClass = 'green'; break;
+      case 'Blocked': statusClass = 'red'; break;
+      case 'In Test': statusClass = 'blue'; break;
       case 'Done': statusClass = ''; break;
     }
     return statusClass;
   }
 });
 Template.messageStatusDropdown.events({
-  'click li': function(ev) {
+  'click .item': function(ev) {
     var status = $(ev.target).text();
     Meteor.call('messageUpdateStatusField', this._id, status, function(error, result) {
       if (error) {
